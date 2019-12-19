@@ -82,7 +82,7 @@ class ElementDetailController: UIViewController {
                 }
             case .success:
                 DispatchQueue.main.async {
-                    self?.showAlert(title: "Favorite Posted", message: "Thanks for favoriting.") { alert in
+                    self?.showAlert(title: "Favorite Posted", message: "Thanks for favoriting this element!!") { alert in
                         self?.dismiss(animated: true)
                     }
                 }
