@@ -11,21 +11,17 @@ import UIKit
 class ElementDetailController: UIViewController {
 
     @IBOutlet var symbolLabel: UILabel!
-    
     @IBOutlet var elementImage: UIImageView!
-    
     @IBOutlet var numWeightLabel: UILabel!
-    
     @IBOutlet var meltingBoilingLabel: UILabel!
-    
     @IBOutlet var discoveredByLabel: UILabel!
+    @IBOutlet var favoritedByLabel: UILabel!
     
     var element: Element?
     var isAllElements = Bool()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         updateUI()
     }
     
@@ -38,14 +34,18 @@ class ElementDetailController: UIViewController {
         
         let imageUrl = "http://images-of-elements.com/\(element.name.lowercased()).jpg"
         
+        navigationItem.title = element.name
+        symbolLabel.text = element.symbol
+        numWeightLabel.text = "Num: \(element.number.description), Atomic Mass: \(element.atomicMass?.description ?? "N/A")"
+        
+        meltingBoilingLabel.text = "Melting pt: \(element.melt?.description ?? "N/A"), Boiling pt: \(element.boil?.description ?? "N/A")"
+        
+        discoveredByLabel.text = "Discovered by - \(element.discoveredBy ?? "N/A")"
+        
         if isAllElements {
-            navigationItem.title = element.name
-            symbolLabel.text = element.symbol
-            numWeightLabel.text = "Num: \(element.number.description), Atomic Mass: \(element.atomicMass.description )"
-            
-            meltingBoilingLabel.text = "Melting pt: \(element.melt?.description ?? "N/A"), Boiling pt: \(element.boil?.description ?? "N/A")"
-            
-            discoveredByLabel.text = "Discovered by - \(element.discoveredBy ?? "N/A")"
+            favoritedByLabel.text = ""
+        } else {
+            favoritedByLabel.text = "Favorited by - \(element.favoritedBy ?? "N/A")"
         }
         
         elementImage.getImage(with: imageUrl) { [weak self] (result) in

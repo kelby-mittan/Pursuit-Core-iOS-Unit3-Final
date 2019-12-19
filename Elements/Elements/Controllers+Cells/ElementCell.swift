@@ -21,7 +21,7 @@ class ElementCell: UITableViewCell {
     func configureCell(for element: Element) {
         
         elementName.text = element.name
-        symbolWeightLabel.text = "\(element.symbol)(\(element.number.description)) \(element.atomicMass.description)"
+        symbolWeightLabel.text = "\(element.symbol)(\(element.number.description)) \(element.atomicMass?.description ?? "N/A")"
         
         var elementNumString = element.number.description
         

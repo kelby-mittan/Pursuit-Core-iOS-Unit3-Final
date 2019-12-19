@@ -21,7 +21,7 @@ class FavoriteCell: UITableViewCell {
     func configureCell(for element: Element) {
         
         elementNameLabel.text = element.name
-        symbolWeightLabel.text = "\(element.symbol)(\(element.number.description)) \(element.atomicMass.description)"
+        symbolWeightLabel.text = "\(element.symbol)(\(element.number.description)) \(element.atomicMass?.description ?? "N/A")"
         favoritedByLabel.text = element.favoritedBy
         
         var elementNumString = element.number.description

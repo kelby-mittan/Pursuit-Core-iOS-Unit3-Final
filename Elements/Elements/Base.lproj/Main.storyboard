@@ -91,12 +91,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4X6-2K-R4c">
-                                <rect key="frame" x="82" y="150.5" width="250" height="250"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="Ifw-G8-PIw"/>
-                                    <constraint firstAttribute="width" constant="250" id="VsG-sU-vTw"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.grid.hex.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4X6-2K-R4c">
+                                <rect key="frame" x="0.0" y="151" width="414" height="356.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Symbol" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jiP-13-3uH">
                                 <rect key="frame" x="20" y="108" width="374" height="26.5"/>
@@ -105,19 +101,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Num: Atomic Weight:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9H-Xq-n10">
-                                <rect key="frame" x="20" y="420.5" width="374" height="18"/>
+                                <rect key="frame" x="20" y="529" width="374" height="18"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Melting Pt: Boiling pt:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJt-CX-2T8">
-                                <rect key="frame" x="20" y="446.5" width="374" height="18"/>
+                                <rect key="frame" x="20" y="555" width="374" height="18"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discovered by: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svL-MF-PcW">
-                                <rect key="frame" x="20" y="472.5" width="374" height="18"/>
+                                <rect key="frame" x="20" y="581" width="374" height="18"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorited by - " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iB8-Li-7Xw">
+                                <rect key="frame" x="20" y="619" width="374" height="18"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -127,16 +129,22 @@
                         <constraints>
                             <constraint firstItem="fJt-CX-2T8" firstAttribute="top" secondItem="g9H-Xq-n10" secondAttribute="bottom" constant="8" id="Doo-Tn-NQG"/>
                             <constraint firstItem="g9H-Xq-n10" firstAttribute="top" secondItem="4X6-2K-R4c" secondAttribute="bottom" constant="20" id="Gpv-O9-hIg"/>
+                            <constraint firstItem="4X6-2K-R4c" firstAttribute="leading" secondItem="7Ry-xQ-ejM" secondAttribute="leading" id="H7G-na-htA"/>
                             <constraint firstItem="svL-MF-PcW" firstAttribute="leading" secondItem="7Ry-xQ-ejM" secondAttribute="leading" constant="20" id="IW7-df-WPw"/>
                             <constraint firstItem="7Ry-xQ-ejM" firstAttribute="trailing" secondItem="fJt-CX-2T8" secondAttribute="trailing" constant="20" id="LzG-iD-Gf0"/>
                             <constraint firstItem="7Ry-xQ-ejM" firstAttribute="trailing" secondItem="jiP-13-3uH" secondAttribute="trailing" constant="20" id="MLj-hO-5kv"/>
+                            <constraint firstItem="iB8-Li-7Xw" firstAttribute="leading" secondItem="7Ry-xQ-ejM" secondAttribute="leading" constant="20" id="Nov-15-oUt"/>
+                            <constraint firstItem="4X6-2K-R4c" firstAttribute="height" secondItem="dvD-H0-MKS" secondAttribute="height" multiplier="0.4" id="VRY-HY-3FH"/>
+                            <constraint firstItem="7Ry-xQ-ejM" firstAttribute="trailing" secondItem="iB8-Li-7Xw" secondAttribute="trailing" constant="20" id="Waq-6S-eS0"/>
                             <constraint firstItem="4X6-2K-R4c" firstAttribute="top" secondItem="jiP-13-3uH" secondAttribute="bottom" constant="16" id="XnL-rb-AcH"/>
                             <constraint firstItem="7Ry-xQ-ejM" firstAttribute="trailing" secondItem="svL-MF-PcW" secondAttribute="trailing" constant="20" id="YaY-rS-t0E"/>
                             <constraint firstItem="7Ry-xQ-ejM" firstAttribute="trailing" secondItem="g9H-Xq-n10" secondAttribute="trailing" constant="20" id="bSR-bS-7eU"/>
                             <constraint firstItem="fJt-CX-2T8" firstAttribute="leading" secondItem="7Ry-xQ-ejM" secondAttribute="leading" constant="20" id="cXN-aY-ARl"/>
+                            <constraint firstItem="iB8-Li-7Xw" firstAttribute="top" secondItem="svL-MF-PcW" secondAttribute="bottom" constant="20" id="g1g-Jn-0NO"/>
                             <constraint firstItem="jiP-13-3uH" firstAttribute="top" secondItem="7Ry-xQ-ejM" secondAttribute="top" constant="20" id="hOg-uf-3LD"/>
                             <constraint firstItem="4X6-2K-R4c" firstAttribute="centerX" secondItem="dvD-H0-MKS" secondAttribute="centerX" id="nik-17-wY4"/>
                             <constraint firstItem="g9H-Xq-n10" firstAttribute="leading" secondItem="7Ry-xQ-ejM" secondAttribute="leading" constant="20" id="rVJ-kG-Lfz"/>
+                            <constraint firstItem="7Ry-xQ-ejM" firstAttribute="trailing" secondItem="4X6-2K-R4c" secondAttribute="trailing" id="rma-ad-euv"/>
                             <constraint firstItem="svL-MF-PcW" firstAttribute="top" secondItem="fJt-CX-2T8" secondAttribute="bottom" constant="8" id="sZr-S0-e3t"/>
                             <constraint firstItem="jiP-13-3uH" firstAttribute="leading" secondItem="7Ry-xQ-ejM" secondAttribute="leading" constant="20" id="t83-1F-VnW"/>
                         </constraints>
@@ -152,6 +160,7 @@
                     <connections>
                         <outlet property="discoveredByLabel" destination="svL-MF-PcW" id="mmW-9R-gWR"/>
                         <outlet property="elementImage" destination="4X6-2K-R4c" id="wBr-KX-puW"/>
+                        <outlet property="favoritedByLabel" destination="iB8-Li-7Xw" id="YY1-z4-vys"/>
                         <outlet property="meltingBoilingLabel" destination="fJt-CX-2T8" id="fLX-8k-UhH"/>
                         <outlet property="numWeightLabel" destination="g9H-Xq-n10" id="k9K-qg-d3m"/>
                         <outlet property="symbolLabel" destination="jiP-13-3uH" id="pSE-vT-ifa"/>
@@ -161,11 +170,11 @@
             </objects>
             <point key="canvasLocation" x="3126" y="497"/>
         </scene>
-        <!--Search-->
+        <!--Elements-->
         <scene sceneID="VBP-cc-dYu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Epi-y6-jPR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="8TC-kv-G5R"/>
+                    <tabBarItem key="tabBarItem" title="Elements" image="circle.grid.hex.fill" catalog="system" id="8TC-kv-G5R"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="g6Y-Np-aUZ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -218,8 +227,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TIc-xU-0CH">
-                                                    <rect key="frame" x="0.0" y="0.0" width="145" height="128"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.grid.hex.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TIc-xU-0CH">
+                                                    <rect key="frame" x="0.0" y="0.5" width="145" height="126"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EjO-9Y-kaU">
                                                     <rect key="frame" x="153" y="11" width="233" height="20.5"/>
@@ -279,7 +288,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="hM9-h5-qNA"/>
                     <connections>
-                        <outlet property="tableView" destination="JEC-Qq-606" id="CoU-YG-ZNH"/>
+                        <outlet property="tableView" destination="JEC-Qq-606" id="Pbf-gW-aEb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1c9-cw-IFG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -308,7 +317,7 @@
     </scenes>
     <resources>
         <image name="circle.grid.hex" catalog="system" width="64" height="56"/>
-        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
+        <image name="circle.grid.hex.fill" catalog="system" width="64" height="56"/>
         <image name="plus" catalog="system" width="64" height="56"/>
         <image name="star.fill" catalog="system" width="64" height="58"/>
     </resources>

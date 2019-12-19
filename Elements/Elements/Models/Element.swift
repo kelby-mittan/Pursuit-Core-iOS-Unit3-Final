@@ -12,19 +12,19 @@ struct Element: Codable {
     
     let name: String
     let appearance: String?
-    let atomicMass: Double
+    let atomicMass: Double?
     let boil: Double?
-    let category: String
+    let category: String?
     let discoveredBy: String?
     let melt: Double?
-    let summary: String
+    let summary: String?
     let number: Int
-    let period: Int
+    let period: Int?
     let symbol: String
     let favoritedBy: String?
     let molarHeat: Double?
-    let phase: String
-    let source: String
+    let phase: String?
+    let source: String?
     
     enum CodingKeys: String, CodingKey {
         case name

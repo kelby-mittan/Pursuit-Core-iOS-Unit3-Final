@@ -87,7 +87,8 @@ struct ElementAPIClient {
             case .success(let data):
                 do {
                     let elements = try JSONDecoder().decode([Element].self, from: data)
-                    completion(.success(elements))
+                    let filterElements = elements.filter { $0.favoritedBy == "Walter White" }
+                    completion(.success(filterElements))
                 } catch {
                     completion(.failure(.decodingError(error)))
                 }
