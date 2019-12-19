@@ -28,7 +28,7 @@ class ElementsTests: XCTestCase {
                     let searchResults = try JSONDecoder().decode([Element].self, from: data)
                     let elements = searchResults
                     
-                    XCTAssertEqual(elements.count, 100, "Should be 123")
+                    XCTAssertEqual(elements.count, 100, "Should be 100")
                 } catch {
                     XCTFail()
                 }
