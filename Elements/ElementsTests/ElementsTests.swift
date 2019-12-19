@@ -8,26 +8,35 @@
 
 import XCTest
 
+@testable import Elements
+
 class ElementsTests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
+    func testElementCount() {
+                
+        let exp = XCTestExpectation(description: "searches found")
+        let episodesEndpointURL = "https://5c1d79abbc26950013fbcaa9.mockapi.io/api/v1/elements"
+        
+        let request = URLRequest(url: URL(string: episodesEndpointURL)!)
+        
+        NetworkHelper.shared.performDataTask(with: request) { (result) in
+            switch result {
+            case .failure(let appError):
+                XCTFail("\(appError)")
+            case .success(let data):
+                do {
+                    let searchResults = try JSONDecoder().decode([Element].self, from: data)
+                    let elements = searchResults
+                    
+                    XCTAssertEqual(elements.count, 100, "Should be 123")
+                } catch {
+                    XCTFail()
+                }
+                exp.fulfill()
+            }
         }
+        
+        wait(for: [exp], timeout: 5.0)
     }
 
 }

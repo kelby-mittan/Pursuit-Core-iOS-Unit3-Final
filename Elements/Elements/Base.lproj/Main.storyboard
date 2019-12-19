@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Podcasts-->
+        <!--Elements-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ElementsListController" customModule="Elements" customModuleProvider="target" sceneMemberID="viewController">
@@ -74,9 +74,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Podcasts" id="i8T-Qt-7a1"/>
+                    <navigationItem key="navigationItem" title="Elements" id="i8T-Qt-7a1"/>
                     <connections>
-                        <outlet property="tableView" destination="emJ-0n-k0g" id="V7n-Ae-XNu"/>
+                        <outlet property="tableView" destination="emJ-0n-k0g" id="9IV-ZH-El8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -303,6 +303,6 @@
         <image name="star.fill" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jra-JY-oPC"/>
+        <segue reference="1fr-2Y-5F1"/>
     </inferredMetricsTieBreakers>
 </document>
