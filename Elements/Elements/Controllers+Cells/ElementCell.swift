@@ -46,33 +46,11 @@ class ElementCell: UITableViewCell {
             }
         }
         
-//        collectionLabel.text = podcast.collectionName
-//        artistLabel.text = podcast.artistName
-//
-//        let imageURL = podcast.artworkUrl600
-//
-//        urlString = imageURL
-//
-//        podcastArtImage.getImage(with: imageURL) { [weak self] (result) in
-//            switch result {
-//            case .failure:
-//                DispatchQueue.main.async {
-//                    self?.podcastArtImage.image = UIImage(systemName: "mic.fill")
-//                }
-//            case .success(let image):
-//                DispatchQueue.main.async {
-//                    if self?.urlString == imageURL {
-//                        self?.podcastArtImage.image = image
-//                    }
-//
-//                }
-//            }
-//        }
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        elementImage.image = UIImage(systemName: "mic.fill")
+        elementImage.image = UIImage(systemName: "circle.grid.hex")
     }
     
 }

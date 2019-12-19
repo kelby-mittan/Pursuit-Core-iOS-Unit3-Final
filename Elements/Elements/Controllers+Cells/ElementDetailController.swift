@@ -31,12 +31,36 @@ class ElementDetailController: UIViewController {
     
     func updateUI() {
         
-        if isAllElements {
-            symbolLabel.text = element?.symbol
-            numWeightLabel.text = "Num: \(element?.number.description ?? "N/A") Atomic Mass: \(element?.atomicMass.description ?? "N/A")"
-            
-            
+        guard let element = element else {
+            showAlert(title: "Error", message: "Could not get element")
+            return
         }
+        
+        let imageUrl = "http://images-of-elements.com/\(element.name.lowercased()).jpg"
+        
+        if isAllElements {
+            navigationItem.title = element.name
+            symbolLabel.text = element.symbol
+            numWeightLabel.text = "Num: \(element.number.description), Atomic Mass: \(element.atomicMass.description )"
+            
+            meltingBoilingLabel.text = "Melting pt: \(element.melt?.description ?? "N/A"), Boiling pt: \(element.boil?.description ?? "N/A")"
+            
+            discoveredByLabel.text = "Discovered by - \(element.discoveredBy ?? "N/A")"
+        }
+        
+        elementImage.getImage(with: imageUrl) { [weak self] (result) in
+            switch result {
+            case .failure:
+                DispatchQueue.main.async {
+                    self?.elementImage.image = UIImage(systemName: "circle.grid.hex")
+                }
+            case .success(let image):
+                DispatchQueue.main.async {
+                    self?.elementImage.image = image
+                }
+            }
+        }
+        
     }
 
     @IBAction func postElementButton(_ sender: UIBarButtonItem) {
